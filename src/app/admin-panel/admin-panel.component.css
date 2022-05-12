@@ -1,0 +1,44 @@
+.card {
+  box-shadow: 0 0 5px 0 #0006;
+  border-radius: 10px;
+  padding: 20px;
+  display: grid;
+  gap: 30px;
+  width: 240px;
+  margin: auto;
+  text-align: center;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 24px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.Container {
+  justify-content: center;
+  align-items: center;
+}
+
+.card h2, .card p {
+  margin: 0;
+  text-align: center;
+}
+
+.project-title {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.form_card__text {
+  display: grid;
+  gap: 20px;
+}
+
+.card select {
+  width: 200px;
+}
+

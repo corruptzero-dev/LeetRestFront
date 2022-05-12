@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" rel="stylesheet">
+  <title>Home</title>
+</head>
+<body>
+
+<header>
+  <a>
+    <span class="project-title" onclick="location.href='/'">LeetRest</span>
+  </a>
+</header>
+<section>
+  <div class="Container">
+    <div class="card">
+      <div class="column">
+        <h2>Добавьте книгу</h2>
+        <form #bookForm="ngForm" (ngSubmit)="onSubmit(bookForm.value)" id="form_card__text" novalidate>
+          <input id="title" name="title" ngModel placeholder="Название" required type="text">
+          <br>
+          <input id="author" name="author" ngModel placeholder="Автор" required type="text">
+          <br>
+          <input id="description" name="description" ngModel placeholder="Описание" required type="text">
+          <br>
+          <select name="genre" ngModel required>
+            <option disabled selected value="">Жанр</option>
+            <option>Образование</option>
+            <option>Фантастика</option>
+            <option>Комедия</option>
+            <option>Классика</option>
+            <option>Детектив</option>
+          </select>
+          <br>
+          <input id="image" name="image" ngModel placeholder="Ссылка на изображение" required type="text">
+          <br>
+          <input id="isbn" name="isbn" ngModel placeholder="ISBN" required type="text">
+          <br>
+          <button onclick="location.href='/catalogue'" type="submit">Добавить</button>
+          <br>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+</body>
+</html>
+

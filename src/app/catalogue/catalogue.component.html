@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <title>Каталог</title>
+</head>
+<body>
+<header>
+  <a>
+    <span class="project-title" onclick="location.href='/'">LeetRest</span>
+    <form class="search-form">
+      <input #key="ngModel" (ngModelChange)="searchBooks(key.value)" class="search-input" id="searchName"
+             name="key" ngModel placeholder="Искать книги..." required type="search">
+    </form>
+  </a>
+
+</header>
+<div class="container">
+  <div *ngFor="let book of books">
+    <div class="card" >
+      <div [style]="{backgroundImage: 'url(' + book.image + ')'}" class="card__pic"></div>
+      <div class="card__text">
+        <h2>{{book.title}}</h2>
+        <p>{{book.author}}</p>
+        <p>{{book.genre}}</p>
+        <p>{{book.isbn}}</p>
+        <div class="card__parameters">
+          <span class="like" id="like" onclick="this.innerHTML = (this.innerHTML==='♡'? '♥' : '♡');">♡</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card" onclick="location.href='http://localhost:4200/admin'" style="cursor: pointer">
+    <div [style]="{backgroundImage: 'url(https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Plus_symbol.svg/750px-Plus_symbol.svg.png?20081122110508)'}"
+         class="card__pic"></div>
+    <div class="card__text">
+      <h2>{{'Добавить книгу'}}</h2>
+      <p>Нажмите на карточку</p>
+    </div>
+  </div>
+</div>
+<script>
+</script>
+</body>
+
+</html>
